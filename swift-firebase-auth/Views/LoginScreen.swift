@@ -52,6 +52,9 @@ class LoginScreen: UIView {
     
     private lazy var logo : UIImageView = {
         let image = UIImageView()
+        
+        image.contentMode = .scaleAspectFit
+        image.isUserInteractionEnabled = false
         image.image = UIImage(named: "logo")
         image.translatesAutoresizingMaskIntoConstraints = false
         return image

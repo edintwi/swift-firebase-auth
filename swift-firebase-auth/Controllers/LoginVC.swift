@@ -9,6 +9,18 @@ import UIKit
 import FirebaseAuth
 
 class LoginVC: UIViewController, LoginScreenDelegate {
+
+    var screen: LoginScreen?
+    
+    override func loadView() {
+        self.screen = LoginScreen()
+        self.view = self.screen
+        screen?.delegate = self
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     func didTapForgotPasswordButton() {
         print("tapped")
     }
@@ -33,19 +45,6 @@ class LoginVC: UIViewController, LoginScreenDelegate {
                 print("Not")
             }
         })
-    }
-    
-
-    var screen: LoginScreen?
-    
-    
-    override func loadView() {
-        self.screen = LoginScreen()
-        self.view = self.screen
-        screen?.delegate = self
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
     
 }
