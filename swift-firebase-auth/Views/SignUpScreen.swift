@@ -146,8 +146,8 @@ class SignUpScreen: UIView {
             
             self.signUpButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             self.signUpButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.signUpButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor),
-            
+            self.signUpButton.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+        
             self.signUpButton.heightAnchor.constraint(equalToConstant: 50),
             
         ])

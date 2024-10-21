@@ -153,7 +153,7 @@ class LoginScreen: UIView {
     
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            self.logo.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 55),
+            self.logo.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.logo.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.logo.widthAnchor.constraint(equalToConstant: 106),
             self.logo.heightAnchor.constraint(equalToConstant: 106),
@@ -171,18 +171,20 @@ class LoginScreen: UIView {
             self.passwordTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             self.passwordTextField.heightAnchor.constraint(equalToConstant: 50),
             
-            self.loginButton.topAnchor.constraint(equalTo: self.passwordTextField.bottomAnchor, constant: 20),
+            self.recoveryPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 5),
+            self.recoveryPasswordButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            
+            self.loginButton.bottomAnchor.constraint(equalTo: self.signUpLabel.topAnchor, constant: -20),
             self.loginButton.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
             self.loginButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
             self.loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.loginButton.heightAnchor.constraint(equalToConstant: 50),
             
-            
-            self.signUpLabel.topAnchor.constraint(equalTo: self.loginButton.bottomAnchor, constant: 10),
+        
+            self.signUpLabel.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             self.signUpLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            self.recoveryPasswordButton.topAnchor.constraint(equalTo: signUpLabel.bottomAnchor, constant: 5),
-            self.recoveryPasswordButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+           
             
            
         ])

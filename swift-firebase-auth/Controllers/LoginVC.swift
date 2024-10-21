@@ -22,7 +22,9 @@ class LoginVC: UIViewController, LoginScreenDelegate {
     }
     
     func didTapForgotPasswordButton() {
-        print("tapped")
+        let RecoveryPasswordVC = RecoveryPasswordVC()
+        
+        navigationController?.pushViewController(RecoveryPasswordVC, animated: true)
     }
     
     func didTapSignUpButton() {

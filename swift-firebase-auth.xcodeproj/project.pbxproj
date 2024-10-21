@@ -19,6 +19,8 @@
 		DD98FF7B2CBFFE910077487C /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98FF7A2CBFFE910077487C /* RegisterUserRequest.swift */; };
 		DDCA51902CC687490040868E /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCA518F2CC687490040868E /* SignUpScreen.swift */; };
 		DDCA51922CC687D40040868E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCA51912CC687D40040868E /* SignUpVC.swift */; };
+		DDD839E82CC6B6170053CF48 /* RecoveryPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD839E72CC6B6170053CF48 /* RecoveryPasswordScreen.swift */; };
+		DDD839EA2CC6B7520053CF48 /* RecoveryPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD839E92CC6B7520053CF48 /* RecoveryPasswordVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		DD98FF7A2CBFFE910077487C /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 		DDCA518F2CC687490040868E /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		DDCA51912CC687D40040868E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		DDD839E72CC6B6170053CF48 /* RecoveryPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordScreen.swift; sourceTree = "<group>"; };
+		DDD839E92CC6B7520053CF48 /* RecoveryPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordVC.swift; sourceTree = "<group>"; };
 		EE4EDB1D2224CAD88E8AD1D6 /* Pods-swift-firebase-auth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swift-firebase-auth.release.xcconfig"; path = "Target Support Files/Pods-swift-firebase-auth/Pods-swift-firebase-auth.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +112,7 @@
 			children = (
 				DD22A6032CBFF36C0097C759 /* LoginVC.swift */,
 				DDCA51912CC687D40040868E /* SignUpVC.swift */,
+				DDD839E92CC6B7520053CF48 /* RecoveryPasswordVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 			children = (
 				DD22A6022CBFF36C0097C759 /* LoginScreen.swift */,
 				DDCA518F2CC687490040868E /* SignUpScreen.swift */,
+				DDD839E72CC6B6170053CF48 /* RecoveryPasswordScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -244,10 +250,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDD839EA2CC6B7520053CF48 /* RecoveryPasswordVC.swift in Sources */,
 				DD22A6062CBFF36C0097C759 /* AppDelegate.swift in Sources */,
 				DDCA51922CC687D40040868E /* SignUpVC.swift in Sources */,
 				DD22A6072CBFF36C0097C759 /* LoginScreen.swift in Sources */,
 				DD98FF772CBFFD630077487C /* AuthService.swift in Sources */,
+				DDD839E82CC6B6170053CF48 /* RecoveryPasswordScreen.swift in Sources */,
 				DDCA51902CC687490040868E /* SignUpScreen.swift in Sources */,
 				DD98FF7B2CBFFE910077487C /* RegisterUserRequest.swift in Sources */,
 				DD97E7712CC15A1B000CADEE /* SignInUserRequest.swift in Sources */,
