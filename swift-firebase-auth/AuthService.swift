@@ -56,21 +56,24 @@ class AuthService {
     }
     
     
-    public func signInUser(with userRequest: SignInUserRequest, completion: @escaping (Bool, Error?) -> Void){
-        Auth.auth().signIn(withEmail: userRequest.email, password: userRequest.password){ [weak self] authResult, error in guard self != nil else {return}
-            if let error = error{
-                completion(false, error)
+    public func signInUser(with userRequest: SignInUserRequest, completion: @escaping (Error?) -> Void) {
+        Auth.auth().signIn(withEmail: userRequest.email, password: userRequest.password) {result, error in
+            if let error = error {
+                completion(error)
                 return
-            }
-            
-            if authResult != nil{
-                completion(true, nil)
             } else {
-                completion(false, nil)
+                completion(nil)
             }
-            
         }
-        
     }
     
+    public func signOutUser(completion: @escaping (Error?) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completion(nil)
+        }
+        catch let error {
+            completion(error) 
+        }
+    }
 }
