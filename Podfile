@@ -7,5 +7,6 @@ target 'swift-firebase-auth' do
 
   # Pods for swift-firebase-auth
 	pod 'FirebaseAuth'
+	pod 'FirebaseFirestore'
 	
 end

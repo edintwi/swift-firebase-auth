@@ -15,6 +15,8 @@ protocol LoginScreenDelegate: AnyObject {
 
 class LoginScreen: UIView {
     
+    weak var delegate: LoginScreenDelegate?
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -37,7 +39,6 @@ class LoginScreen: UIView {
         self.addSubview(self.recoveryPasswordButton)
      }
     
-    weak var delegate: LoginScreenDelegate?
     
     private lazy var loginTitle: UILabel = {
         let label = UILabel()

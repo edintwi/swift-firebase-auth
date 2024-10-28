@@ -8,6 +8,18 @@
 import UIKit
 
 class SignUpVC: UIViewController, SignUpDelegate {
+    func didTapSignUpButton(user:   RegisterUserRequest) {
+        AuthService.shared.registerUser(with: user, completion: {
+            wasRegistred, error in
+            if let error = error{
+                print(error.localizedDescription)
+                return
+            }
+            
+            print(wasRegistred)
+        })
+    }
+    
 
     var screen : SignUpScreen?
     
@@ -21,8 +33,5 @@ class SignUpVC: UIViewController, SignUpDelegate {
         super.viewDidLoad()
     }
     
-    func didTapSignUpButton() {
-        print("tapped")
-    }
 
 }

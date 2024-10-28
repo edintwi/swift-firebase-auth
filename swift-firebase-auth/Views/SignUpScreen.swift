@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SignUpDelegate: AnyObject {
-    func didTapSignUpButton()
+    func didTapSignUpButton(user: RegisterUserRequest)
 }
 
 class SignUpScreen: UIView {
@@ -32,6 +32,35 @@ class SignUpScreen: UIView {
         label.font = .systemFont(ofSize: 20, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    } ()
+    
+    private lazy var userNameLabel: UILabel = {
+        let label = UILabel()
+        
+        label.text = "Username"
+        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    } ()
+    
+    private lazy var userNameTextField: UITextField = {
+        let textField = UITextField()
+        
+        textField.autocorrectionType = .no
+        textField.placeholder = "Username"
+        textField.borderStyle = .roundedRect
+        textField.keyboardType = .emailAddress
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
+        textField.textColor = .black
+        textField.clipsToBounds = true
+        textField.layer.cornerRadius = 12
+        textField.layer.borderWidth = 1.0
+        textField.layer.borderColor = UIColor.lightGray.cgColor
+        
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        
+        return textField
     } ()
     
     private lazy var emailLabel: UILabel = {
@@ -110,11 +139,16 @@ class SignUpScreen: UIView {
     } ()
     
     @objc func signUpTapped() {
-        delegate?.didTapSignUpButton()
+        let user = RegisterUserRequest(
+            userName: userNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!
+        )
+        delegate?.didTapSignUpButton(user: user)
     }
         
     private func setHierarchy() {
         self.addSubview(signUpLabel)
+        self.addSubview(userNameLabel)
+        self.addSubview(userNameTextField)
         self.addSubview(emailLabel)
         self.addSubview(emailTextField)
         self.addSubview(passwordLabel)
@@ -127,7 +161,15 @@ class SignUpScreen: UIView {
             self.signUpLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             self.signUpLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
-            self.emailLabel.topAnchor.constraint(equalTo: signUpLabel.bottomAnchor, constant: 20),
+            self.userNameLabel.topAnchor.constraint(equalTo: signUpLabel.bottomAnchor, constant: 20),
+            self.userNameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            
+            self.userNameTextField.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 10),
+            self.userNameTextField.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            self.userNameTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            self.userNameTextField.heightAnchor.constraint(equalToConstant: 50),
+            
+            self.emailLabel.topAnchor.constraint(equalTo: userNameTextField.bottomAnchor, constant: 20),
             self.emailLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
             
             self.emailTextField.topAnchor.constraint(equalTo: emailLabel.bottomAnchor, constant: 10),
