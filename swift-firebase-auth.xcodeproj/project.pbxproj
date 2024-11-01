@@ -14,6 +14,8 @@
 		DD22A6092CBFF36C0097C759 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22A6042CBFF36C0097C759 /* SceneDelegate.swift */; };
 		DD22A60A2CBFF36C0097C759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD22A5FF2CBFF36C0097C759 /* Assets.xcassets */; };
 		DD22A60B2CBFF36C0097C759 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD22A6002CBFF36C0097C759 /* GoogleService-Info.plist */; };
+		DD3E57FC2CCFD5BC003AE655 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E57FB2CCFD5BC003AE655 /* HomeScreen.swift */; };
+		DD3E57FE2CCFD797003AE655 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E57FD2CCFD797003AE655 /* HomeVC.swift */; };
 		DD97E7712CC15A1B000CADEE /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97E7702CC15A1B000CADEE /* SignInUserRequest.swift */; };
 		DD98FF772CBFFD630077487C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98FF762CBFFD630077487C /* AuthService.swift */; };
 		DD98FF7B2CBFFE910077487C /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98FF7A2CBFFE910077487C /* RegisterUserRequest.swift */; };
@@ -33,6 +35,8 @@
 		DD22A6022CBFF36C0097C759 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		DD22A6032CBFF36C0097C759 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		DD22A6042CBFF36C0097C759 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DD3E57FB2CCFD5BC003AE655 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		DD3E57FD2CCFD797003AE655 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		DD4312792CBD5939006B5862 /* swift-firebase-auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-firebase-auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD97E7702CC15A1B000CADEE /* SignInUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUserRequest.swift; sourceTree = "<group>"; };
 		DD98FF762CBFFD630077487C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				DD22A6032CBFF36C0097C759 /* LoginVC.swift */,
 				DDCA51912CC687D40040868E /* SignUpVC.swift */,
 				DDD839E92CC6B7520053CF48 /* RecoveryPasswordVC.swift */,
+				DD3E57FD2CCFD797003AE655 /* HomeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				DD22A6022CBFF36C0097C759 /* LoginScreen.swift */,
 				DDCA518F2CC687490040868E /* SignUpScreen.swift */,
 				DDD839E72CC6B6170053CF48 /* RecoveryPasswordScreen.swift */,
+				DD3E57FB2CCFD5BC003AE655 /* HomeScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -254,10 +260,12 @@
 				DD22A6062CBFF36C0097C759 /* AppDelegate.swift in Sources */,
 				DDCA51922CC687D40040868E /* SignUpVC.swift in Sources */,
 				DD22A6072CBFF36C0097C759 /* LoginScreen.swift in Sources */,
+				DD3E57FE2CCFD797003AE655 /* HomeVC.swift in Sources */,
 				DD98FF772CBFFD630077487C /* AuthService.swift in Sources */,
 				DDD839E82CC6B6170053CF48 /* RecoveryPasswordScreen.swift in Sources */,
 				DDCA51902CC687490040868E /* SignUpScreen.swift in Sources */,
 				DD98FF7B2CBFFE910077487C /* RegisterUserRequest.swift in Sources */,
+				DD3E57FC2CCFD5BC003AE655 /* HomeScreen.swift in Sources */,
 				DD97E7712CC15A1B000CADEE /* SignInUserRequest.swift in Sources */,
 				DD22A6082CBFF36C0097C759 /* LoginVC.swift in Sources */,
 				DD22A6092CBFF36C0097C759 /* SceneDelegate.swift in Sources */,

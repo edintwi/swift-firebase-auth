@@ -73,7 +73,7 @@ class AuthService {
             completion(nil)
         }
         catch let error {
-            completion(error) 
+            completion(error)
         }
     }
 }

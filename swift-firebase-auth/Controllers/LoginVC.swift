@@ -34,19 +34,7 @@ class LoginVC: UIViewController, LoginScreenDelegate {
     }
     
     func didTapSignInButton(credentials: SignInUserRequest) {
-        AuthService.shared.signInUser(with: credentials, completion: {sucess, error in
-            if(sucess){
-                let alert = UIAlertController(title: "Sucess", message: "You are logged", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-                NSLog("The \"OK\" alert occured.")
-                }))
-                
-                self.present(alert, animated: true, completion: nil)
-                
-            }else {
-                print("Not")
-            }
-        })
+        print("tapped")
     }
     
 }
