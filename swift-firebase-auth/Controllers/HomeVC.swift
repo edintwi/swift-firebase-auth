@@ -9,7 +9,18 @@ import UIKit
 
 class HomeVC: UIViewController, HomeScreenDelegate {
     func didTapLogoutButton() {
-        print("tapped")
+        AuthService.shared.signOutUser { [weak self] error in
+            guard let self = self else {return}
+            if let error = error {
+                AlertManager.showLogoutError(on: self, with: error)
+                return
+            }
+            
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as?
+                SceneDelegate {
+                sceneDelegate.checkAuthentication()
+            }
+        }
     }
     
 
