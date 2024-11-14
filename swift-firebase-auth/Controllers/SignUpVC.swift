@@ -7,20 +7,7 @@
 
 import UIKit
 
-class SignUpVC: UIViewController, SignUpDelegate {
-    func didTapSignUpButton(user:   RegisterUserRequest) {
-        AuthService.shared.registerUser(with: user, completion: {
-            wasRegistred, error in
-            if let error = error{
-                print(error.localizedDescription)
-                return
-            }
-            
-            print(wasRegistred)
-        })
-    }
-    
-
+class SignUpVC: UIViewController {
     var screen : SignUpScreen?
     
     override func loadView() {
@@ -34,4 +21,47 @@ class SignUpVC: UIViewController, SignUpDelegate {
     }
     
 
+}
+
+extension SignUpVC: SignUpDelegate {
+    func didTapSignUpButton(registerUserRequest: RegisterUserRequest) {
+
+        // Username check
+        if !Validator.isValidUsername(for: registerUserRequest.userName) {
+            AlertManager.showInvalidUsernameAlert(on: self)
+            return
+        }
+        // Email check
+        if !Validator.isValidEmail(for: registerUserRequest.email) {
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        
+        // Password check
+        if !Validator.isPasswordValid(for: registerUserRequest.password) {
+            AlertManager.showInvalidPasswordAlert(on: self)
+            return
+        }
+        
+        AuthService.shared.registerUser(with: registerUserRequest) { [weak self]
+            wasRegistered, error in
+            guard let self = self else {return}
+            
+            if let error = error {
+                AlertManager.showRegistrationErrorAlert(on: self, with: error)
+                return
+            }
+            
+            if wasRegistered {
+                if let sceneDelegate = self.view.window?.windowScene?.delegate as?  SceneDelegate {
+                    sceneDelegate.checkAuthentication()
+                } else {
+                    AlertManager.showRegistrationUnknowErrorAlert(on: self)
+                }
+            }
+            
+        }
+    }
+    
+    
 }

@@ -14,6 +14,7 @@
 		DD22A6092CBFF36C0097C759 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD22A6042CBFF36C0097C759 /* SceneDelegate.swift */; };
 		DD22A60A2CBFF36C0097C759 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD22A5FF2CBFF36C0097C759 /* Assets.xcassets */; };
 		DD22A60B2CBFF36C0097C759 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD22A6002CBFF36C0097C759 /* GoogleService-Info.plist */; };
+		DD23C6DB2CE62B01003707CC /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD23C6DA2CE62B01003707CC /* Validator.swift */; };
 		DD3E57FC2CCFD5BC003AE655 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E57FB2CCFD5BC003AE655 /* HomeScreen.swift */; };
 		DD3E57FE2CCFD797003AE655 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E57FD2CCFD797003AE655 /* HomeVC.swift */; };
 		DD52C9D22CE62017002F8FE7 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52C9D12CE62017002F8FE7 /* AlertManager.swift */; };
@@ -36,6 +37,7 @@
 		DD22A6022CBFF36C0097C759 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		DD22A6032CBFF36C0097C759 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		DD22A6042CBFF36C0097C759 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		DD23C6DA2CE62B01003707CC /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		DD3E57FB2CCFD5BC003AE655 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		DD3E57FD2CCFD797003AE655 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		DD4312792CBD5939006B5862 /* swift-firebase-auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-firebase-auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,16 +84,17 @@
 		DD22A6052CBFF36C0097C759 /* swift-firebase-auth */ = {
 			isa = PBXGroup;
 			children = (
+				DD98FF762CBFFD630077487C /* AuthService.swift */,
+				DD52C9D12CE62017002F8FE7 /* AlertManager.swift */,
 				DD98FF782CBFFE620077487C /* Models */,
 				DD98FF752CBFFC2B0077487C /* Views */,
 				DD98FF742CBFFC1C0077487C /* Controllers */,
-				DD22A5FE2CBFF36C0097C759 /* AppDelegate.swift */,
 				DD22A5FF2CBFF36C0097C759 /* Assets.xcassets */,
 				DD22A6002CBFF36C0097C759 /* GoogleService-Info.plist */,
 				DD22A6012CBFF36C0097C759 /* Info.plist */,
+				DD22A5FE2CBFF36C0097C759 /* AppDelegate.swift */,
 				DD22A6042CBFF36C0097C759 /* SceneDelegate.swift */,
-				DD98FF762CBFFD630077487C /* AuthService.swift */,
-				DD52C9D12CE62017002F8FE7 /* AlertManager.swift */,
+				DD23C6DA2CE62B01003707CC /* Validator.swift */,
 			);
 			path = "swift-firebase-auth";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				DD3E57FE2CCFD797003AE655 /* HomeVC.swift in Sources */,
 				DD98FF772CBFFD630077487C /* AuthService.swift in Sources */,
 				DDD839E82CC6B6170053CF48 /* RecoveryPasswordScreen.swift in Sources */,
+				DD23C6DB2CE62B01003707CC /* Validator.swift in Sources */,
 				DDCA51902CC687490040868E /* SignUpScreen.swift in Sources */,
 				DD98FF7B2CBFFE910077487C /* RegisterUserRequest.swift in Sources */,
 				DD3E57FC2CCFD5BC003AE655 /* HomeScreen.swift in Sources */,

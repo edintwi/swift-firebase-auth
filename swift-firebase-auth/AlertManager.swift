@@ -45,7 +45,7 @@ extension AlertManager {
     }
     
     public static func showRegistrationErrorAlert(on vc: UIViewController, with error: Error) {
-        self.showBasicAlert(on: vc, with: "Unknow registration error", and: "\(error.localizedDescription)")
+        self.showBasicAlert(on: vc, with: "Registration error", and: "\(error.localizedDescription)")
     }
 }
 

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SignUpDelegate: AnyObject {
-    func didTapSignUpButton(user: RegisterUserRequest)
+    func didTapSignUpButton(registerUserRequest: RegisterUserRequest)
 }
 
 class SignUpScreen: UIView {
@@ -139,10 +139,13 @@ class SignUpScreen: UIView {
     } ()
     
     @objc func signUpTapped() {
-        let user = RegisterUserRequest(
-            userName: userNameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!
+        let registerUserRequest = RegisterUserRequest(
+            userName: userNameTextField.text ?? "",
+            email: emailTextField.text ?? "",
+            password: passwordTextField.text ?? ""
         )
-        delegate?.didTapSignUpButton(user: user)
+
+        delegate?.didTapSignUpButton(registerUserRequest: registerUserRequest)
     }
         
     private func setHierarchy() {
