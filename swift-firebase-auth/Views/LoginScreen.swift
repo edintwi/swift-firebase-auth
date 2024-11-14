@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginScreenDelegate: AnyObject {
-    func didTapSignInButton(credentials: SignInUserRequest)
+    func didTapSignInButton(userSignInRequest: SignInUserRequest)
     func didTapSignUpButton()
     func didTapForgotPasswordButton()
 }
@@ -166,7 +166,7 @@ class LoginScreen: UIView {
     
     @objc private func didButtonTapped() {
         let userCredentials = SignInUserRequest(email: loginTextField.text!, password: passwordTextField.text!)
-        delegate?.didTapSignInButton(credentials: userCredentials )
+        delegate?.didTapSignInButton(userSignInRequest: userCredentials )
     }
     
     @objc private func navigateToSignUP() {

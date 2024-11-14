@@ -35,7 +35,28 @@ extension LoginVC: LoginScreenDelegate {
         navigationController?.pushViewController(signUpVC, animated: true)
     }
     
-    func didTapSignInButton(credentials: SignInUserRequest) {
-        AlertManager.showInvalidEmailAlert(on: self)
+    func didTapSignInButton(userSignInRequest: SignInUserRequest) {
+       
+        // Email check
+        if !Validator.isValidEmail(for: userSignInRequest.email) {
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        
+        AuthService.shared.signInUser(with: userSignInRequest, completion: {
+            error in
+            if let error = error {
+                AlertManager.showSignInErrorAlert(on: self, with: error)
+                return
+            }
+            
+            if let sceneDelegate = self.view.window?.windowScene?.delegate as?  SceneDelegate {
+                sceneDelegate.checkAuthentication()
+            } else {
+                AlertManager.showRegistrationUnknowErrorAlert(on: self)
+            }
+        }
+            
+        )
     }
 }
