@@ -36,6 +36,6 @@ extension LoginVC: LoginScreenDelegate {
     }
     
     func didTapSignInButton(credentials: SignInUserRequest) {
-        print("tapped")
+        AlertManager.showInvalidEmailAlert(on: self)
     }
 }

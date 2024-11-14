@@ -9,13 +9,7 @@ import UIKit
 
 class HomeVC: UIViewController, HomeScreenDelegate {
     func didTapLogoutButton() {
-        AuthService.shared.signOutUser(completion: ({error in
-            if let error {
-                print("failed")
-            } else {
-                print("logout")
-            }
-        }))
+        print("tapped")
     }
     
 
