@@ -30,14 +30,29 @@ class LoginScreen: UIView {
     }
     
     private func setHierarchy() {
-        self.addSubview(self.loginTitle)
-        self.addSubview(self.logo)
-        self.addSubview(self.loginTextField)
-        self.addSubview(self.passwordTextField)
-        self.addSubview(self.loginButton)
-        self.addSubview(self.signUpLabel)
-        self.addSubview(self.recoveryPasswordButton)
+        self.addSubview(self.contentStackView)
+        self.recoveryPasswordContainer.addSubview(self.recoveryPasswordButton)
+        
      }
+    
+    // - MARK: - Layout
+    
+    private lazy var contentStackView: UIStackView = {
+        let stack = UIStackView(arrangedSubviews: [
+            loginTitle, logo, loginTextField, passwordTextField, recoveryPasswordContainer, loginButton, signUpLabel
+        ])
+        stack.axis = .vertical
+        stack.spacing = 24
+        stack.distribution = .fillProportionally
+        
+        
+        
+        stack.setCustomSpacing(5, after: passwordTextField)
+        stack.setCustomSpacing(15, after: loginButton)
+        
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        return stack
+    } ()
     
     
     private lazy var loginTitle: UILabel = {
@@ -101,9 +116,17 @@ class LoginScreen: UIView {
         return textField
     } ()
     
+    private lazy var recoveryPasswordContainer: UIView = {
+        let view = UIView()
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    } ()
+    
     private lazy var recoveryPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Forgot password?", for: .normal)
+        button.titleLabel?.textAlignment = .right
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         button.addTarget(self, action: #selector(navigateToForgotPassword), for: .touchUpInside)
         
@@ -139,6 +162,8 @@ class LoginScreen: UIView {
         return button
     } ()
     
+    // MARK: - ACTIONS
+    
     @objc private func didButtonTapped() {
         let userCredentials = SignInUserRequest(email: loginTextField.text!, password: passwordTextField.text!)
         delegate?.didTapSignInButton(credentials: userCredentials )
@@ -152,42 +177,24 @@ class LoginScreen: UIView {
         delegate?.didTapForgotPasswordButton()
     }
     
+    
+    // - MARK: - CONSTRAINTS
+    
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            self.logo.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            self.logo.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.logo.widthAnchor.constraint(equalToConstant: 106),
-            self.logo.heightAnchor.constraint(equalToConstant: 106),
+            self.contentStackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.contentStackView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 24),
+            self.contentStackView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -24),
 
-            self.loginTitle.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            self.loginTitle.topAnchor.constraint(equalTo: logo.bottomAnchor, constant: 20),
-            
-            self.loginTextField.topAnchor.constraint(equalTo: loginTitle.bottomAnchor, constant: 30),
-            self.loginTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            self.loginTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             self.loginTextField.heightAnchor.constraint(equalToConstant: 50),
-            
-            self.passwordTextField.topAnchor.constraint(equalTo: loginTextField.bottomAnchor, constant: 20),
-            self.passwordTextField.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -20),
-            self.passwordTextField.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             self.passwordTextField.heightAnchor.constraint(equalToConstant: 50),
-            
-            self.recoveryPasswordButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 5),
-            self.recoveryPasswordButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            
-            self.loginButton.bottomAnchor.constraint(equalTo: self.signUpLabel.topAnchor, constant: -20),
-            self.loginButton.leadingAnchor.constraint(equalTo: self.passwordTextField.leadingAnchor),
-            self.loginButton.trailingAnchor.constraint(equalTo: self.passwordTextField.trailingAnchor),
-            self.loginButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+
+            self.recoveryPasswordContainer.heightAnchor.constraint(equalToConstant: 30),
+            self.recoveryPasswordButton.trailingAnchor.constraint(equalTo: self.recoveryPasswordContainer.trailingAnchor),
+
             self.loginButton.heightAnchor.constraint(equalToConstant: 50),
             
-        
-            self.signUpLabel.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -10),
-            self.signUpLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            
-           
-            
-           
+            self.signUpLabel.heightAnchor.constraint(equalToConstant: 15),
         ])
     }
 }

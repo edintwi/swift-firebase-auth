@@ -31,16 +31,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     public func checkAuthentication() {
         if Auth.auth().currentUser == nil {
-            let viewController = LoginVC()
-            let navigation = UINavigationController(rootViewController: viewController)
-            
-            window?.rootViewController = navigation
+            self.goToController(with: LoginVC())
         } else {
-            let viewController = HomeVC()
-            let navigation = UINavigationController(rootViewController: viewController)
-            
-            window?.rootViewController = navigation
+            self.goToController(with: HomeVC())
         }
+    }
+    
+    public func goToController(with viewController: UIViewController) {
+        DispatchQueue.main.async { [weak self] in
+            UIView.animate(withDuration: 0.25) {
+                self?.window?.layer.opacity = 0
+            } completion: { [weak self] _ in
+                let nav = UINavigationController(rootViewController: viewController)
+                nav.modalPresentationStyle = .fullScreen
+                self?.window?.rootViewController = nav
+                
+                UIView.animate(withDuration: 0.25) {
+                    self?.window?.layer.opacity = 1
+                }
+            }
+            
+        }
+        
     }
     
 }
