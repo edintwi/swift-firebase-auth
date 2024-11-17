@@ -22,7 +22,7 @@ The following tools were used to build the project:
 - Firebase Firestore Database
 - Cocoapods
 
-## Prerequisites
+## ⚙️ Prerequisites
 
 To run this app you need to generate a GoogleService-Info.plist in firebase
 
