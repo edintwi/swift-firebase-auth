@@ -22,6 +22,23 @@ The following tools were used to build the project:
 - Firebase Firestore Database
 - Cocoapods
 
+## Prerequisites
+
+To run this app you need to generate a GoogleService-Info.plist in firebase
+
+- Access the Firebase Console
+- Choose an existing project or create a new one if none exists.
+- Add an iOS App to the Project:
+- In the Firebase dashboard, click “Add app” and select iOS.
+- Download the GoogleService-Info.plist
+- Add GoogleService-Info.plist to Xcode
+- Activate Firestore and Create a Collection
+- In the Firebase Console, navigate to Build > Firestore Database.
+- Click “Create database” and follow the prompts to set it up.
+- Choose the appropriate security rules and click “Enable”.
+- Once Firestore is active, create a collection named “users” to store user data.
+- To finish, run ```pod install``` in the terminal to install the firebase dependencies.
+
 ### 🧑‍💻 Author
 ---
 <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/49498964?v=4" width="100px;" alt=""/>
