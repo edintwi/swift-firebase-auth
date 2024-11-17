@@ -58,7 +58,7 @@ extension AlertManager {
     }
     
     public static func showSignInErrorAlert(on vc: UIViewController, with error: Error) {
-        self.showBasicAlert(on: vc, with: "Unknow signing error", and: "\(error.localizedDescription)")
+        self.showBasicAlert(on: vc, with: "Signing error", and: "\(error.localizedDescription)")
     }
 }
 
