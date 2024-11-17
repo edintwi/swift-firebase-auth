@@ -9,6 +9,7 @@ A simple authentication flow in swift using firebase authentication and firestor
 - [x] User sign up
 - [x] User sign out
 - [x] Recovery password
+- [ ] Social Authentication
 
 ### 🛠 Tecnologies
 
@@ -16,11 +17,11 @@ The following tools were used to build the project:
 - Swift 6.0
 - Firebase Authentication
 - Firebase Firestore Database
-- Cocopods
+- Cocoapods
 
 ### Author
 ---
- <img style="border-radius: 50%;" src="[https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4](https://avatars.githubusercontent.com/u/49498964?v=4)" width="100px;" alt=""/>
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/49498964?v=4" width="100px;" alt=""/>
  <br />
  <sub><b>Edson Brandon</b></sub></a>
 
