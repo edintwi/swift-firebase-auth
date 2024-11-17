@@ -24,5 +24,5 @@ The following tools were used to build the project:
  <br />
  <sub><b>Edson Brandon</b></sub></a>
 
-[![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/edson-brandon/)](https://www.linkedin.com/in/tgmarinho/) 
-[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:edsonbrandon@gmail.com)](mailto:edsonbrandon@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-Edson-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/edson-brandon/)](https://www.linkedin.com/in/edson-brandon/) 
+[![Gmail Badge](https://img.shields.io/badge/-edsonbrandon@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:edsonbrandon@gmail.com)](mailto:edsonbrandon@gmail.com)
