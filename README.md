@@ -3,6 +3,9 @@
 ## Description
 A simple authentication flow in swift using firebase authentication and firestore database.
 
+
+![Gravação de Tela 2024-11-17 às 14 20 55](https://github.com/user-attachments/assets/fbaafb46-4649-4b8e-8ccb-82680a911746)
+
 ### Features
 
 - [x] User login
