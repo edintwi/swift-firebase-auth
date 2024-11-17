@@ -18,6 +18,7 @@
 		DD3E57FC2CCFD5BC003AE655 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E57FB2CCFD5BC003AE655 /* HomeScreen.swift */; };
 		DD3E57FE2CCFD797003AE655 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3E57FD2CCFD797003AE655 /* HomeVC.swift */; };
 		DD52C9D22CE62017002F8FE7 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD52C9D12CE62017002F8FE7 /* AlertManager.swift */; };
+		DD7A9DA32CE9B4EB002E0F1A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD7A9DA22CE9B4EB002E0F1A /* User.swift */; };
 		DD97E7712CC15A1B000CADEE /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97E7702CC15A1B000CADEE /* SignInUserRequest.swift */; };
 		DD98FF772CBFFD630077487C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98FF762CBFFD630077487C /* AuthService.swift */; };
 		DD98FF7B2CBFFE910077487C /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98FF7A2CBFFE910077487C /* RegisterUserRequest.swift */; };
@@ -42,6 +43,7 @@
 		DD3E57FD2CCFD797003AE655 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		DD4312792CBD5939006B5862 /* swift-firebase-auth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-firebase-auth.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD52C9D12CE62017002F8FE7 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		DD7A9DA22CE9B4EB002E0F1A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD97E7702CC15A1B000CADEE /* SignInUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUserRequest.swift; sourceTree = "<group>"; };
 		DD98FF762CBFFD630077487C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DD98FF7A2CBFFE910077487C /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				DD98FF7A2CBFFE910077487C /* RegisterUserRequest.swift */,
 				DD97E7702CC15A1B000CADEE /* SignInUserRequest.swift */,
+				DD7A9DA22CE9B4EB002E0F1A /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				DD22A6062CBFF36C0097C759 /* AppDelegate.swift in Sources */,
 				DDCA51922CC687D40040868E /* SignUpVC.swift in Sources */,
 				DD22A6072CBFF36C0097C759 /* LoginScreen.swift in Sources */,
+				DD7A9DA32CE9B4EB002E0F1A /* User.swift in Sources */,
 				DD3E57FE2CCFD797003AE655 /* HomeVC.swift in Sources */,
 				DD98FF772CBFFD630077487C /* AuthService.swift in Sources */,
 				DDD839E82CC6B6170053CF48 /* RecoveryPasswordScreen.swift in Sources */,

@@ -68,5 +68,51 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA58D6C8-DE4A-4F48-AA31-FE6B7524ECE1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "swift-firebase-auth/Controllers/HomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BA58D6C8-DE4A-4F48-AA31-FE6B7524ECE1 - d83036a54bf8ac4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;swift_firebase_auth.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in swift_firebase_auth.HomeVC.viewDidLoad() -&gt; ()"
+                  moduleName = "swift-firebase-auth.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edintwi/Documents/Development/swift-firebase-auth/swift-firebase-auth/Controllers/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30">
+               </Location>
+               <Location
+                  uuid = "BA58D6C8-DE4A-4F48-AA31-FE6B7524ECE1 - d83036a54bf8ac4c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;swift_firebase_auth.User&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in swift_firebase_auth.HomeVC.viewDidLoad() -&gt; ()"
+                  moduleName = "swift-firebase-auth.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/edintwi/Documents/Development/swift-firebase-auth/swift-firebase-auth/Controllers/HomeVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

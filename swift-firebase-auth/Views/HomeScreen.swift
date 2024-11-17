@@ -15,15 +15,17 @@ class HomeScreen: UIView {
     
     weak var delegate: HomeScreenDelegate?
     
+    // - MARK: Setup View
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupView()
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        setupView()
     }
-    
+    // - MARK: - UI Components
     private lazy var logoutButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Logout", for: .normal)
@@ -34,24 +36,18 @@ class HomeScreen: UIView {
         return button
     }  ()
     
-    private lazy var userNameLabel: UILabel = {
+    public lazy var label: UILabel = {
         let label  = UILabel()
-        label.text = "edintwi"
-        
-        
+        label.textColor = .label
+        label.textAlignment = .center
+        label.font = .systemFont(ofSize: 24, weight: .semibold)
+        label.text = "Loading..."
+        label.numberOfLines = 2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     } ()
-    
-    private lazy var emailLabel: UILabel = {
-        let label  = UILabel()
-        label.text = "edintwi@gmail.com"
-        
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    } ()
-    
+
+    // - MARK: - Selectors
    @objc private func logoutTapped() {
         delegate?.didTapLogoutButton()
     }
@@ -65,21 +61,17 @@ class HomeScreen: UIView {
     
     private func setHierarchy(){
         self.addSubview(logoutButton)
-        self.addSubview(userNameLabel)
-        self.addSubview(emailLabel)
+        self.addSubview(label)
     }
     
+    // - MARK: - Constraints
     private func setupConstraints(){
         NSLayoutConstraint.activate([
             logoutButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
             logoutButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
-            userNameLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            userNameLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            
-            
-            emailLabel.topAnchor.constraint(equalTo: userNameLabel.bottomAnchor, constant: 10),
-            emailLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            label.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            label.centerYAnchor.constraint(equalTo: self.centerYAnchor),
         ])
     }
 }

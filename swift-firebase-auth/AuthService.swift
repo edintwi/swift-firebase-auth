@@ -10,14 +10,14 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class AuthService {
-     public static let shared = AuthService()
+    public static let shared = AuthService()
     
     private init(){
         
     }
     
     public func registerUser(with userRequest: RegisterUserRequest, completion:
-    @escaping (Bool, Error?) -> Void) {
+                             @escaping (Bool, Error?) -> Void) {
         
         let userName = userRequest.userName
         let email = userRequest.email
@@ -50,7 +50,7 @@ class AuthService {
                     
                     completion(true, nil)
                 }
-
+            
             
         }
     }
@@ -82,5 +82,31 @@ class AuthService {
         Auth.auth().sendPasswordReset(withEmail: email) { error in
             completion(error)
         }
+    }
+    
+    public func fetchUser(completion: @escaping (User?, Error?) -> Void) {
+        guard let userUID = Auth.auth().currentUser?.uid else { return }
+        
+        let db = Firestore.firestore()
+        
+        db.collection("users")
+            .document(userUID)
+            .getDocument { snapshot, error in
+                if let error = error {
+                    completion(nil, error)
+                    return
+                }
+                
+                if let snapshot = snapshot, snapshot.exists {
+                    if let snapshotData = snapshot.data(),
+                       let username = snapshotData["username"] as? String,
+                       let email = snapshotData["email"] as? String {
+                        let user = User(username: username, email: email, userUID: userUID)
+                        completion(user, nil)
+                    }
+                    
+                    
+                }
+            }
     }
 }
