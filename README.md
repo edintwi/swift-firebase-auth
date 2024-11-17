@@ -1,12 +1,12 @@
 # Swift firebase authentication flow
 
-## Description
+## 📚 Description
 A simple authentication flow in swift using firebase authentication and firestore database.
 
 
 ![Gravação de Tela 2024-11-17 às 14 20 55](https://github.com/user-attachments/assets/fbaafb46-4649-4b8e-8ccb-82680a911746)
 
-### Features
+### ✅ Features
 
 - [x] User login
 - [x] User sign up
@@ -22,7 +22,7 @@ The following tools were used to build the project:
 - Firebase Firestore Database
 - Cocoapods
 
-### Author
+### 🧑‍💻 Author
 ---
 <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/49498964?v=4" width="100px;" alt=""/>
  <br />
