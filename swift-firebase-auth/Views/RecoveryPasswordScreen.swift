@@ -8,13 +8,14 @@
 import UIKit
 
 protocol RecoveryPasswordScreenDelegate: AnyObject {
-    func didTapSendMailButton()
+    func didTapSendMailButton(with email: String)
 }
 
 class RecoveryPasswordScreen: UIView {
     
     weak var delegate : RecoveryPasswordScreenDelegate?
     
+    // - MARK: - Setup UI
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -39,6 +40,7 @@ class RecoveryPasswordScreen: UIView {
         self.addSubview(sendMailButton)
     }
     
+    // - MARK: - UI Components
     private lazy var title: UILabel = {
         let label = UILabel()
         
@@ -104,11 +106,13 @@ class RecoveryPasswordScreen: UIView {
         return button
     } ()
     
+    // - MARK: - Selectors
     @objc private func sendMailTapped() {
-        delegate?.didTapSendMailButton()
+        let email = self.emailTextField.text ?? ""
+        delegate?.didTapSendMailButton(with: email)
     }
     
-    
+    // - MARK: - Constraints
     private func setupConstraints() {
         NSLayoutConstraint.activate([
             title.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 20),

@@ -7,11 +7,7 @@
 
 import UIKit
 
-class RecoveryPasswordVC: UIViewController, RecoveryPasswordScreenDelegate {
-    
-    func didTapSendMailButton() {
-        print("tapped")
-    }
+class RecoveryPasswordVC: UIViewController {
     
     
     var screen : RecoveryPasswordScreen?
@@ -25,4 +21,27 @@ class RecoveryPasswordVC: UIViewController, RecoveryPasswordScreenDelegate {
         
     }
     
+}
+
+extension RecoveryPasswordVC: RecoveryPasswordScreenDelegate {
+    func didTapSendMailButton(with email: String) {
+       
+        // Email check
+        if !Validator.isValidEmail(for: email) {
+            AlertManager.showInvalidEmailAlert(on: self)
+            return
+        }
+        
+        AuthService.shared.forgotPassword(with: email) {[weak self] error in
+            guard let self = self else {return}
+            if let error = error {
+                AlertManager.showErrorSendingPasswordReset(on: self, with: error)
+                return
+            }
+            
+            AlertManager.showPasswordResetSend(on: self)
+        
+        }
+    }
+
 }
