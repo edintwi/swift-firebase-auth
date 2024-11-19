@@ -46,6 +46,13 @@ class HomeScreen: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     } ()
+    
+     lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        return tableView
+    } ()
 
     // - MARK: - Selectors
    @objc private func logoutTapped() {
@@ -60,18 +67,27 @@ class HomeScreen: UIView {
     }
     
     private func setHierarchy(){
-        self.addSubview(logoutButton)
         self.addSubview(label)
+        self.addSubview(logoutButton)
+        self.addSubview(tableView)
     }
     
     // - MARK: - Constraints
     private func setupConstraints(){
         NSLayoutConstraint.activate([
-            logoutButton.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
-            logoutButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
+            label.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            label.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             
-            label.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: self.centerYAnchor),
+            tableView.topAnchor.constraint(equalTo: label.bottomAnchor, constant: 16),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: logoutButton.topAnchor, constant: -16),
+            
+            logoutButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            logoutButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            logoutButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -16),
+            logoutButton.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
 }

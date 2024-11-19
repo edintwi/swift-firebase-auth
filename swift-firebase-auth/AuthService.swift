@@ -11,10 +11,7 @@ import FirebaseFirestore
 
 class AuthService {
     public static let shared = AuthService()
-    
-    private init(){
-        
-    }
+    let db = Firestore.firestore()
     
     public func registerUser(with userRequest: RegisterUserRequest, completion:
                              @escaping (Bool, Error?) -> Void) {
@@ -87,8 +84,6 @@ class AuthService {
     public func fetchUser(completion: @escaping (User?, Error?) -> Void) {
         guard let userUID = Auth.auth().currentUser?.uid else { return }
         
-        let db = Firestore.firestore()
-        
         db.collection("users")
             .document(userUID)
             .getDocument { snapshot, error in
@@ -108,5 +103,23 @@ class AuthService {
                     
                 }
             }
+    }
+    
+    public func fetcAllhUsers() async -> [User] {
+        var users = [User]()
+        
+        do {
+            let querySnapshot = try await db.collection("users").getDocuments()
+            
+            for document in querySnapshot.documents {
+                
+                users.append(User(username: document.data()["username"] as? String ?? "unknow", email: document.data()["email"] as? String ?? "unknow", userUID: document.documentID))
+            }
+            
+            return users
+        } catch {
+            return []
+        }
+        
     }
 }
