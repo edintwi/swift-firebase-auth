@@ -22,6 +22,7 @@
 		DD97E7712CC15A1B000CADEE /* SignInUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD97E7702CC15A1B000CADEE /* SignInUserRequest.swift */; };
 		DD98FF772CBFFD630077487C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98FF762CBFFD630077487C /* AuthService.swift */; };
 		DD98FF7B2CBFFE910077487C /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD98FF7A2CBFFE910077487C /* RegisterUserRequest.swift */; };
+		DDA4A4822CF4EA6500DA545B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDA4A4812CF4EA6500DA545B /* LaunchScreen.storyboard */; };
 		DDCA51902CC687490040868E /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCA518F2CC687490040868E /* SignUpScreen.swift */; };
 		DDCA51922CC687D40040868E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCA51912CC687D40040868E /* SignUpVC.swift */; };
 		DDD839E82CC6B6170053CF48 /* RecoveryPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDD839E72CC6B6170053CF48 /* RecoveryPasswordScreen.swift */; };
@@ -47,6 +48,7 @@
 		DD97E7702CC15A1B000CADEE /* SignInUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUserRequest.swift; sourceTree = "<group>"; };
 		DD98FF762CBFFD630077487C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		DD98FF7A2CBFFE910077487C /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
+		DDA4A4812CF4EA6500DA545B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDCA518F2CC687490040868E /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
 		DDCA51912CC687D40040868E /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		DDD839E72CC6B6170053CF48 /* RecoveryPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoveryPasswordScreen.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				DD22A5FF2CBFF36C0097C759 /* Assets.xcassets */,
 				DD22A6002CBFF36C0097C759 /* GoogleService-Info.plist */,
 				DD22A6012CBFF36C0097C759 /* Info.plist */,
+				DDA4A4812CF4EA6500DA545B /* LaunchScreen.storyboard */,
 				DD22A5FE2CBFF36C0097C759 /* AppDelegate.swift */,
 				DD22A6042CBFF36C0097C759 /* SceneDelegate.swift */,
 				DD23C6DA2CE62B01003707CC /* Validator.swift */,
@@ -211,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDA4A4822CF4EA6500DA545B /* LaunchScreen.storyboard in Resources */,
 				DD22A60A2CBFF36C0097C759 /* Assets.xcassets in Resources */,
 				DD22A60B2CBFF36C0097C759 /* GoogleService-Info.plist in Resources */,
 			);

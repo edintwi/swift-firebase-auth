@@ -71,7 +71,7 @@ class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return "List of Users"
     }
     
-    
+
 }
 
 extension HomeVC: HomeScreenDelegate {
