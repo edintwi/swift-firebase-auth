@@ -1,12 +1,12 @@
 # Swift firebase authentication flow
 
-## 📚 Description
+## Description
 A simple authentication flow in swift using firebase authentication and firestore database.
 
 
 ![Gravação de Tela 2024-11-17 às 14 20 55](https://github.com/user-attachments/assets/fbaafb46-4649-4b8e-8ccb-82680a911746)
 
-### ✅ Features
+### Features
 
 - [x] User login
 - [x] User sign up
@@ -14,7 +14,7 @@ A simple authentication flow in swift using firebase authentication and firestor
 - [x] Recovery password
 - [ ] Social Authentication
 
-### 🛠 Tecnologies
+### Tecnologies
 
 The following tools were used to build the project:
 - Swift 6.0
@@ -22,7 +22,7 @@ The following tools were used to build the project:
 - Firebase Firestore Database
 - Cocoapods
 
-### ⚙️ Prerequisites
+### Prerequisites
 
 To run this app you need to generate a GoogleService-Info.plist in firebase
 
@@ -39,7 +39,7 @@ To run this app you need to generate a GoogleService-Info.plist in firebase
 - Once Firestore is active, create a collection named “users” to store user data.
 - To finish, run ```pod install``` in the terminal to install the firebase dependencies.
 
-### 🧑‍💻 Author
+### Author
 ---
 <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/49498964?v=4" width="100px;" alt=""/>
  <br />
